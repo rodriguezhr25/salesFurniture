@@ -1,0 +1,17 @@
+ [data-src] {
+     filter: blur(0.2em);
+ }
+ 
+ img {
+     min-width: 300px;
+     min-height: 400px;
+     filter: blur(0em);
+     transition: filter 0.5s;
+ }
+ 
+ main {
+     text-align: center;
+     display: grid;
+     justify-content: center;
+     gap: 10px;
+ }

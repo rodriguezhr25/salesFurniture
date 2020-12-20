@@ -1,0 +1,63 @@
+@media only screen and (min-width: 1024px) {
+    .navigation {
+        display: flex;
+    }
+    .navigation li {
+        display: block;
+        /* needed because of state in small view */
+        flex: 1 1 100%;
+    }
+    .navigation li:first-child {
+        display: none;
+    }
+    main {
+        margin: 0 auto;     
+    }
+    footer {
+        margin: 0 auto;
+      
+    }
+    .headings h1 {
+        font-size: 3rem;
+    }
+    .motto {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .contentBox {
+        font-size: 1.2rem;
+    }
+    .logo {
+        width: 120px;
+    }
+    .gallery section:hover {
+        box-shadow: 5px 20px 50px #282b40;
+        ;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        padding: 20px;
+        background: #FFAC00;
+    }
+    .card {
+        background-color: #F2EFDF;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 5px 5px 10px #282b40;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+  
+  
+    
+}
