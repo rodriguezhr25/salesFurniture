@@ -30,6 +30,6 @@ $headers = 'From: '. $email_from ."\r\n".
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);
 
-echo "¡Your message has been sent!";
+echo "<div style=\"background-color:green;color:white;padding:4px;text-align:center;\">Thanks, we have received your message.</div>";
 }
 ?>
