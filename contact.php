@@ -39,20 +39,17 @@ require_once("sistema/config_pw/conexion.php");
     <div id="page-container">
         <div id="content-wrap">
         
-        <div class="herodiv">
-    <h1 class="bg-brown">           
+        
+        <div class="herodiv-contact">
+    <h1 class="bg-brown-contact">           
         </h1>
-        <div class="summary">
-          <img src = "images/logo.png" alt="logo-start-sales" >
-            <h1 class="titles">START SALES FURNITURE OUTLET </h1>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                Ut wisi enim ad minim veniam, quis nostrud exerci
-                tation ullamcorper suscipit lobortis nisl ut aliquip ex
-                ea commodo consequat. Duis autem vel eum iriure
-                dolor in hendrerit in vulputate velit esse molestie
-                
-
-            </p>
+        
+        <div class="summary-contact">
+        <h1 class="titles center single">FINANCING PLANS, DELIVERY AND NEW MERCH <span class="ligther">EVERY WEEK. </span> </h1>          
+         
+           <div class="btn-wraper">
+           <button type="button" class="btn  btn-danger btn-lg">LEARN MORE</button>
+           </div>
 
 
         </div>
@@ -83,7 +80,7 @@ require_once("sistema/config_pw/conexion.php");
                         <a class="py-2 d-md-inline-block" href="about-us.php">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="py-2 d-md-inline-block" href="contact.php">CONTACT US</a>
+                    <a class="py-2 d-md-inline-block" href="contact.php">CONTACT US</a>
                     </li>
                 </ul>
             </div>

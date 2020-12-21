@@ -69,7 +69,7 @@ if (!$_GET) {
                         <a class="py-2 d-md-inline-block" href="about-us.php">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="py-2 d-md-inline-block" href="#">CONTACT US</a>
+                    <a class="py-2 d-md-inline-block" href="contact.php">CONTACT US</a>
                     </li>
                 </ul>
             </div>

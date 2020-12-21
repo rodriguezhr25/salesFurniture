@@ -70,6 +70,20 @@
         width: 30%;  
        
     }
+    .summary-contact {
+        position: absolute;
+        bottom: 40%;
+        left: 6%;        
+        padding: 1rem;     
+        width: 30%;  
+       
+    }
+    .bg-brown-contact {
+     
+        min-width: 40%;    
+    
+        
+       }
     .summary-about {
         position: absolute;
         bottom: 15%;
