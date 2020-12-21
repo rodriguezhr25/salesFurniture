@@ -30,6 +30,6 @@ $headers = 'From: '. $email_from ."\r\n".
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);
 
-echo "<div style=\"background-color:green;color:white;padding:4px;text-align:center;\">Thanks, we have received your message.</div>";
+echo "<div  class=\"alert alert-success alert-dismissible\" role=\"alert\" auto-close=\"2000\" > <button type=\"button\" class=\"close\" data-dismiss=\"alert\"  >&times;</button> Message sent successfully.</div>";
 }
 ?>

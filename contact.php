@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once("sistema/config_pw/db.php");
-require_once("sistema/config_pw/conexion.php");
+/* require_once("sistema/config_pw/db.php");
+require_once("sistema/config_pw/conexion.php"); */
 
 ?>
 <!doctype html>
@@ -129,7 +129,7 @@ require_once("sistema/config_pw/conexion.php");
                                                 </div>
                                             </div>
                                         </form>
-                                        <div id="resultado_mensaje" style="width:300px; height:30px; margin-top: 20px"></div>
+                                        <div id="resultado_mensaje" style="width:300px; height:30px; margin-top: 10px;"></div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
@@ -240,6 +240,7 @@ require_once("sistema/config_pw/conexion.php");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="js/webfontIndex.js"></script>
     <script src="js/functions.js"></script>
+    <script src="mail.js"></script>
 </body>
 
 </html>
