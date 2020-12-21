@@ -22,7 +22,7 @@ $email_message .= "E-mail: " . $_POST['email'] . "\n";
 $email_message .= "Teléfono: " . $_POST['phone'] . "\n";
 $email_message .= "Comentarios: " . $_POST['message'] . "\n\n";
 
-$email_to = $_POST['email'];
+$email_to = 'rodriguezhr25@gmail.com';
 
 // Ahora se envía el e-mail usando la función mail() de PHP</bold>
 $headers = 'From: '. $email_from ."\r\n".
