@@ -101,26 +101,27 @@ require_once("sistema/config_pw/conexion.php");
         <div class="col-lg-6">
           <div class="contact-box ml-3">
             <h1 class="font-weight-light mt-2">Quick Contact</h1>
-            <form class="mt-4">
+          
+            <form name="frmContacto" method="post" action="sendbymail.php" class="mt-4">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="form-group mt-2">
-                    <input class="form-control" type="text" placeholder="name">
+                    <input class="form-control" type="text" name= "name" placeholder="name">
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group mt-2">
-                    <input class="form-control" type="email" placeholder="email address">
+                    <input class="form-control" type="email" name ="email" placeholder="email address">
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group mt-2">
-                    <input class="form-control" type="text" placeholder="phone">
+                    <input class="form-control" type="text" name="phone" placeholder="phone">
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group mt-2">
-                    <textarea class="form-control" rows="3" placeholder="message"></textarea>
+                    <textarea class="form-control" rows="3" name = "message" placeholder="message"></textarea>
                   </div>
                 </div>
                 <div class="col-lg-12">
