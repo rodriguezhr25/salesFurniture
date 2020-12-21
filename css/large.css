@@ -41,23 +41,10 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
     }
-    .cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
-        padding: 20px;
-        background: #FFAC00;
-    }
-    .card {
-        background-color: #F2EFDF;
-        padding: 10px;
-        text-align: center;
-        box-shadow: 5px 5px 10px #282b40;
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 95%;
-    }
+
   
-  
+    .contact4 .contact-box {
+        padding: 80px 105px 80px 0px;
+        }
     
 }
