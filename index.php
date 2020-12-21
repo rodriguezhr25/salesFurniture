@@ -23,7 +23,23 @@ require_once("sistema/config_pw/conexion.php");
 
 </head>
 
-<div class="herodiv">
+
+
+<body>
+
+    <!--  <header class="top-header">
+        <a href="index."><img class="logo" src="images/logo-start.png" alt="logo"></a>
+        <section class="headings">
+            <h1> Starts Sales Furniture</h1>
+            <div class="motto">We find the best option for you</div>
+        </section>
+
+    </header> -->
+
+    <div id="page-container">
+        <div id="content-wrap">
+        
+        <div class="herodiv">
     <h1 class="bg-brown">           
         </h1>
         <div class="summary">
@@ -64,7 +80,7 @@ require_once("sistema/config_pw/conexion.php");
                     </li>
 
                     <li class="nav-item">
-                        <a class="py-2 d-md-inline-block" href="#">ABOUT US</a>
+                        <a class="py-2 d-md-inline-block" href="about-us.php">ABOUT US</a>
                     </li>
                     <li class="nav-item">
                         <a class="py-2 d-md-inline-block" href="#">CONTACT US</a>
@@ -74,27 +90,9 @@ require_once("sistema/config_pw/conexion.php");
         </nav>
     </div>
 
-<body>
-
-    <!--  <header class="top-header">
-        <a href="index."><img class="logo" src="images/logo-start.png" alt="logo"></a>
-        <section class="headings">
-            <h1> Starts Sales Furniture</h1>
-            <div class="motto">We find the best option for you</div>
-        </section>
-
-    </header> -->
-
-    <div id="page-container">
-        <div id="content-wrap">
-        
-      
 
 
-
-   <div>
-   <h1 style="text-align:right;">Our Products </h1>
-   </div>
+   
     </div>
 
         <footer class="footer" id="footer">

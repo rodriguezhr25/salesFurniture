@@ -66,7 +66,7 @@ if (!$_GET) {
                     </li>
 
                     <li class="nav-item">
-                        <a class="py-2 d-md-inline-block" href="#">ABOUT US</a>
+                        <a class="py-2 d-md-inline-block" href="about-us.php">ABOUT US</a>
                     </li>
                     <li class="nav-item">
                         <a class="py-2 d-md-inline-block" href="#">CONTACT US</a>

@@ -76,11 +76,20 @@ main {
     backdrop-filter: saturate(180%) blur(20px);
     font-family: 'Montserrat', sans-serif;
   }
-  .site-header a , .footer a {
+  .site-header-alternative {
+    /* background-color: rgba(36, 53, 101, .85);*/
+    background: rgb(122,22,19);
+    background: linear-gradient(90deg, rgba(122,22,19,1) 0%, rgba(128,22,21,1) 55%, rgba(167,25,34,1) 100%); 
+     -webkit-backdrop-filter: saturate(180%) blur(20px);
+     backdrop-filter: saturate(180%) blur(20px);
+     font-family: 'Montserrat', sans-serif;
+   }
+
+  .site-header a , .footer a , .site-header-alternative a {
     color: #fff;
     transition: ease-in-out color .15s;
   }
-  .site-header a:hover , .footer a:hover {
+  .site-header a:hover , .footer a:hover ,  .site-header-alternative a:hover {
     color: #FFAC00;
     text-decoration: none;
   }
@@ -116,41 +125,7 @@ h2 {
     text-align: center;
 }
 
-.logo {
-    width: 70px;
-    box-shadow: none;
-}
 
-.navigation {
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navigation li:first-child {
-    display: block;
-}
-
-.navigation li {
-    display: none;
-}
-
-nav li a {
-    text-decoration: none;
-    display: block;
-    color: #F1F2EC;
-    padding: 1rem;
-}
-
-
-
-nav a:active {
-    color: #F1F2EC;
-    background-color: #244C8E;
-    text-decoration: underline;
-    transition: 0.5s;
-}
 
 .responsive li {
     display: block;
@@ -167,20 +142,12 @@ nav a:active {
     font-size: 2rem;
 }
 
-.color-nav {
-    background-color: #282b40;
-    color: #F1F2EC;
-}
 
-.color-nav-hover {
-    color: #282b40;
-    background-color: #FFAC00;
-}
 
   .container-nav{
 	position: absolute;
 	/* margin: 20px; */
-	width: 70%;
+	width: 60%;
 	right: 0px;
     top: 4rem;
     font-family: 'Montserrat', sans-serif;
@@ -198,7 +165,7 @@ nav a:active {
 /* The hero image */
 
 .herodiv {
-    font-family: 'Montserrat', sans-serif;
+
     background: url('../images/hero-1.jpg') center center no-repeat;
      /* Center and scale the image nicely */
   background-position: center;
@@ -215,9 +182,26 @@ nav a:active {
   
 }
 .herodiv-products {
-    font-family: 'Montserrat', sans-serif;
+
     background: url('../images/hero-1.jpg') center center no-repeat;
      /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    min-height: 100vh;
+  /*  min-width: 100vw;*/
+    overflow: hidden;
+ 
+    position: relative;
+    margin: 0px auto;
+    margin-bottom: 2rem; 
+
+  
+}
+.herodiv-about {
+
+    background: rgb(41,85,156) !important;
+   background: linear-gradient(90deg, rgba(41,85,156,1) 0%, rgba(38,65,121,1) 55%, rgba(35,46,88,1) 100%) !important; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -330,6 +314,104 @@ nav a:active {
     display: block;
    
 }
+
+.summary-about {
+    position: absolute;
+    bottom: 10%;
+    left: 6%;
+
+   
+    padding: 1rem;
+ 
+    width: 65%;  
+   
+}
+.summary-about p{
+    font-size: 2.9vw;
+    font-weight: lighter;
+    color: #ffffff;
+}
+
+/* GALLERY*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   
+    grid-gap: 5px;
+    grid-template-areas: 
+    " . . photo1  " 
+    " photo2 photo3 photo4  " 
+    " . photo5 photo6  " 
+    " . . photo7  " ;
+    position: absolute;
+    bottom: 3%;
+    right: 0px;  
+    padding: 0.5rem;
+    width: 30%;
+    grid-template-rows: 5vh 5vh 5vh 5vh;
+
+  }
+  
+  .photo1 {
+    grid-area: photo1;
+  }
+  
+  .photo>img {
+    object-fit: cover;
+    width: 300px;
+    max-height: 100%;
+  }
+  
+  .photo2 {
+    grid-area: photo2;
+  
+  }
+  
+  .photo3 {
+    grid-area: photo3;
+    background: rgb(196,180,153);
+    background: linear-gradient(90deg, rgba(196,180,153,1) 0%, rgba(205,191,168,1) 55%, rgba(226,219,206,1) 100%); 
+  }
+  
+  .photo4 {
+    grid-area: photo4;
+  
+  }
+  
+  .photo5 {
+    grid-area: photo5;
+  
+  }
+  .photo6 {
+    grid-area: photo6;
+    background: rgb(122,22,19);
+    background: linear-gradient(90deg, rgba(122,22,19,1) 0%, rgba(128,22,21,1) 55%, rgba(167,25,34,1) 100%); 
+  }
+ 
+  .photo7 {
+    grid-area: photo7;
+  
+  }
+  .location-image {
+    line-height: 0;
+    overflow: hidden;
+  }
+  
+  .location-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+ 
+  }
+  
+ 
+  .location-listing:hover .location-title {
+    opacity: 1;
+  }
+  
+  .location-listing:hover .location-image img {
+    filter: blur(2px);
+  }
+/* end*/  
 .summary-products li{
     text-decoration: none;
     display: block;
@@ -344,6 +426,11 @@ nav a:active {
     font-size: 7vw;
     font-weight: bold;
     color:  rgba(35,46,88,1);    
+    
+}
+.about {
+    font-size: 10vw;
+    color: #ffffff;
     
 }
 .center{
@@ -422,11 +509,7 @@ nav a:active {
     font-size: 0.8rem;
 }
 
-article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
+
 
 .info li a {
     text-decoration: none;
