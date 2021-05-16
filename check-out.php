@@ -91,7 +91,7 @@ session_start();
                                     <div class="cart-item detalle-producto">
                                         <?php if (isset($_SESSION['detalle']) && count($_SESSION['detalle']) > 0) { ?>
                                             <div class="bor cart-det">
-                                                <i class="flaticon-shopping-bag"></i>&nbsp; <span>Car</span>
+                                                <i class="flaticon-shopping-bag"></i>&nbsp; <span>Cart</span>
                                             </div>
 
                                             <div class="cart-item-hover">
