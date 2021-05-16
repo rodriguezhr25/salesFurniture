@@ -68,7 +68,7 @@ $(function(){
 
 		if (parseInt(cantidad)>parseInt(stock)) {
 			cantidad=stock;
-			container="<div class='alert alert-danger'><a class='close' data-dismiss='alert'>×</a><span>La Cantidad Solicitada Supera el Stock permitido</span></div>";
+			container="<div class='alert alert-danger'><a class='close' data-dismiss='alert'>×</a><span>This quantity is not available now</span></div>";
 			$(".Mensaje").html(container);
 		}
 		else{$("#Mensaje").html("");}
