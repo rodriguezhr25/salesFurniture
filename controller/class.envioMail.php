@@ -88,20 +88,11 @@
 										$email_from = "adminweb@starsalesfurniture.com";
 										$email_subject = "ORDER";
 										
-										// Aquí se deberían validar los datos ingresados por el usuario</bold>
-										if(!isset($_POST['name']) ||
-										!isset($_POST['email']) ||
-										!isset($_POST['phone']) ||
-										!isset($_POST['message'])) {
-										
-										echo "<b>Error! </b><br />";
-										echo "Plese verify your information and send the message again<br />";
-										die();
-										}
+									
 										
 										
 										
-										$email_to = 'rodriguezhr25@gmail.com';
+									
 										
 										// Ahora se envía el e-mail usando la función mail() de PHP</bold>
 										$headers = 'From: '. $email_from ."\r\n".
