@@ -26,7 +26,28 @@ require_once("sistema/config_pw/conexion.php");
 
 
 <body>
+<div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v10.0'
+  });
+};
 
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+  attribution="install_email"
+  page_id="406521723281789">
+</div>
     <!--  <header class="top-header">
         <a href="index."><img class="logo" src="images/logo-start.png" alt="logo"></a>
         <section class="headings">
@@ -69,7 +90,7 @@ require_once("sistema/config_pw/conexion.php");
                         <img src="images/inside.jpg" />
                     </div>
                     <div class="photo photo3 location-image">
-                      
+
                     </div>
                     <div class="photo photo4 location-image">
                         <img src="images/furniture-store.jpg" />
@@ -78,14 +99,14 @@ require_once("sistema/config_pw/conexion.php");
                         <img src="images/chair.jpg" />
                     </div>
                     <div class="photo photo6 location-image">
-                      
+
                     </div>
                     <div class="photo photo7 location-image">
                         <img src="images/inside.jpg" />
                     </div>
-                  
-                    </div>
-              
+
+                </div>
+
             </div>
             <div id="container" class="container-nav ">
                 <nav class="navbar navbar-expand-lg  site-header-alternative navbar-dark topnav">
@@ -103,15 +124,15 @@ require_once("sistema/config_pw/conexion.php");
                             <li class="nav-item ">
                                 <a class="py-2  d-md-inline-block" href="index.php">HOME</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="py-2  d-md-inline-block" href="productos.php">CATALOGUE</a>
-                            </li>
+                            <!--     <li class="nav-item">
+                        <a class="py-2  d-md-inline-block" href="productos.php">CATALOGUE</a>
+                    </li> -->
 
                             <li class="nav-item">
                                 <a class="py-2 d-md-inline-block" href="about-us.php">ABOUT US</a>
                             </li>
                             <li class="nav-item">
-                            <a class="py-2 d-md-inline-block" href="contact.php">CONTACT US</a>
+                                <a class="py-2 d-md-inline-block" href="contact.php">CONTACT US</a>
                             </li>
                         </ul>
                     </div>

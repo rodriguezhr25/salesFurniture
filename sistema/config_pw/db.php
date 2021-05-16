@@ -1,9 +1,9 @@
 <?php
 /*Datos de conexion a la base de datos*/
 define('DB_HOST', 'sql155.main-hosting.eu');
-define('DB_USER', 'u270831411_invenuser');
-define('DB_PASS', '75u&[$8q');
-define('DB_NAME', 'u270831411_inven');
+define('DB_USER', 'u386209434_2021');
+define('DB_PASS', 'EZ/ih~A9');
+define('DB_NAME', 'u386209434_2021');
  
 /*Datos del usuario administrador del sistema*/
 define('USERNAME', 'root');

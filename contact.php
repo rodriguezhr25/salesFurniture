@@ -26,7 +26,28 @@ require_once("sistema/config_pw/conexion.php"); */
 
 
 <body>
+<div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v10.0'
+  });
+};
 
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+  attribution="install_email"
+  page_id="406521723281789">
+</div>
     <!--  <header class="top-header">
         <a href="index."><img class="logo" src="images/logo-start.png" alt="logo"></a>
         <section class="headings">
@@ -72,9 +93,9 @@ require_once("sistema/config_pw/conexion.php"); */
                             <li class="nav-item ">
                                 <a class="py-2  d-md-inline-block" href="index.php">HOME</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="py-2  d-md-inline-block" href="productos.php">CATALOGUE</a>
-                            </li>
+                            <!--     <li class="nav-item">
+                        <a class="py-2  d-md-inline-block" href="productos.php">CATALOGUE</a>
+                    </li> -->
 
                             <li class="nav-item">
                                 <a class="py-2 d-md-inline-block" href="about-us.php">ABOUT US</a>
@@ -87,6 +108,7 @@ require_once("sistema/config_pw/conexion.php"); */
                 </nav>
             </div>
             <div class="container" id="contact-form">
+
                 <div class="contact3 py-5">
                     <div class="row no-gutters">
                         <div class="container">
@@ -143,7 +165,8 @@ require_once("sistema/config_pw/conexion.php"); */
                                                     <div class="">
                                                         <h6 class="font-weight-medium">Address</h6>
                                                         <p class="">4885 S Redwood Rd
-                                                            <br> Taylorsville, UT</p>
+                                                            <br> Taylorsville, UT
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,7 +178,8 @@ require_once("sistema/config_pw/conexion.php"); */
                                                     <div class="">
                                                         <h6 class="font-weight-medium">Phone</h6>
                                                         <p class="">251 546 9442
-                                                            <br> 630 446 8851</p>
+                                                            <br> 630 446 8851
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>

@@ -3,7 +3,7 @@ session_start();
 require_once("sistema/config_pw/db.php");
 require_once("sistema/config_pw/conexion.php");
 if (!$_GET) {
-    header("Location: productos.php?pagina=1");
+    header("Location: index.php?pagina=1");
 }
 ?>
 <!doctype html>
@@ -23,11 +23,11 @@ if (!$_GET) {
 
   
 </head>
-<div class="herodiv-products">
-    <h1 class="bg-brown-products">           
-        </h1>
+ <div class="herodiv-products"> 
+<!--     <h1 class="bg-brown-products">           
+        </h1> -->
         
-        <div class="summary-products">
+   <!--      <div class="summary-products">
         <h1 class="titles center">CATALOGUE </h1>          
          
             <ul>
@@ -41,7 +41,7 @@ if (!$_GET) {
             </ul>
 
 
-        </div>
+        </div> -->
 
 
     </div>
@@ -61,9 +61,9 @@ if (!$_GET) {
                     <li class="nav-item ">
                         <a class="py-2  d-md-inline-block" href="index.php">HOME</a>
                     </li>
-                    <li class="nav-item">
+              <!--       <li class="nav-item">
                         <a class="py-2  d-md-inline-block" href="productos.php">CATALOGUE</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item">
                         <a class="py-2 d-md-inline-block" href="about-us.php">ABOUT US</a>
@@ -179,7 +179,7 @@ if (!$_GET) {
 
                             while ($row = mysqli_fetch_array($sql_proudcts_all)) {
                                 if(!empty($row['imagen'])){
-                                    $image_path = "http://www.starsales.online/inv/". $row['imagen'];
+                                    $image_path = "http://www.starsales.online/2021/". $row['imagen'];
                                 }else{
                                     $image_path = $row['linkproducto'];      
                                 }
@@ -242,12 +242,12 @@ if (!$_GET) {
                                 $image5 = ($row2['imagen5'] == 'null' || $row2['imagen5'] == 'NULL') ? "" : $row2['imagen5'];
                                 $image6 = ($row2['imagen6'] == 'null' || $row2['imagen6'] == 'NULL') ? "" : $row2['imagen6'];
                                 $video = ($row2['linkproducto'] == 'null'  || $row2['linkproducto'] == 'NULL') ? "" : $row2['linkproducto'];
-                              //  $image_path = ($row2['imagen'] == 'null' || $row2['imagen'] == 'NULL') ? $row2['linkproducto'] :"http://www.starsales.online/inv/" . $row2['imagen'];
-                                $image_path_2 = ($row2['imagen2'] == 'null' || $row2['imagen2'] == 'NULL') ? "" :"http://www.starsales.online/inv/" . $row2['imagen2'];
-                                $image_path_3 = ($row2['imagen3'] == 'null' || $row2['imagen3'] == 'NULL') ? "" :"http://www.starsales.online/inv/" . $row2['imagen3'];
-                                $image_path_4 = ($row2['imagen4'] == 'null' || $row2['imagen4'] == 'NULL') ? "" :"http://www.starsales.online/inv/" . $row2['imagen4'];
-                                $image_path_5 = ($row2['imagen5'] == 'null' || $row2['imagen5'] == 'NULL') ? "" :"http://www.starsales.online/inv/" . $row2['imagen5'];
-                                $image_path_6 = ($row2['imagen6'] == 'null' || $row2['imagen6'] == 'NULL') ? "" :"http://www.starsales.online/inv/" . $row2['imagen6'];
+                              //  $image_path = ($row2['imagen'] == 'null' || $row2['imagen'] == 'NULL') ? $row2['linkproducto'] :"http://www.starsales.online/2021/" . $row2['imagen'];
+                                $image_path_2 = ($row2['imagen2'] == 'null' || $row2['imagen2'] == 'NULL') ? "" :"http://www.starsales.online/2021/" . $row2['imagen2'];
+                                $image_path_3 = ($row2['imagen3'] == 'null' || $row2['imagen3'] == 'NULL') ? "" :"http://www.starsales.online/2021/" . $row2['imagen3'];
+                                $image_path_4 = ($row2['imagen4'] == 'null' || $row2['imagen4'] == 'NULL') ? "" :"http://www.starsales.online/2021/" . $row2['imagen4'];
+                                $image_path_5 = ($row2['imagen5'] == 'null' || $row2['imagen5'] == 'NULL') ? "" :"http://www.starsales.online/2021/" . $row2['imagen5'];
+                                $image_path_6 = ($row2['imagen6'] == 'null' || $row2['imagen6'] == 'NULL') ? "" :"http://www.starsales.online/2021/" . $row2['imagen6'];
                                 $video_path = $row2['linkproducto'];
 
                                 $sql_hijos = mysqli_query($con, "SELECT * FROM articulos h  WHERE codbarras='$codbarras'");
