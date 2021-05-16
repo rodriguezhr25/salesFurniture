@@ -107,7 +107,7 @@
 										$headers = 'From: '. $email_from ."\r\n".
 										'Reply-To: '. $email_from."\r\n" .
 										'X-Mailer: PHP/' . phpversion();
-										@mail($email_to, $email_subject, $email_message, $headers);
+										@mail($email, $email_subject, $email_message, $headers);
 
 										echo "<div  class=\"alert alert-success alert-dismissible\" role=\"alert\" auto-close=\"2000\" > <button type=\"button\" class=\"close\" data-dismiss=\"alert\"  >&times;</button> Message sent successfully.</div>";
 										echo "<script type=\"text/javascript\">alert(\"Email Send!...!\");</script>";
