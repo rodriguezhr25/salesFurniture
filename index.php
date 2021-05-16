@@ -357,7 +357,7 @@ if (!$_GET) {
                                                 "showMethod": "fadeIn",
                                                 "hideMethod": "fadeOut"
                                             }
-                                            toastr["success"]("Articulo Agregado.", "Refermat");
+                                            toastr["success"]("Article Added.", "Sales Furniture");
                                             var producto = document.getElementById('producto<?php echo $row['codbarras']; ?>').value;
                                             var precio = document.getElementById('precio<?php echo $row['codbarras']; ?>').value;
                                             var cantidad = document.getElementById('cantidad<?php echo $row['codbarras']; ?>').value;
