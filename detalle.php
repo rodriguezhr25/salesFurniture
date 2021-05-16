@@ -3,7 +3,7 @@
 ?>
 <?php if(isset($_SESSION['detalle'])){ ?>
 <div class="bor cart-det">
-    <i class="flaticon-shopping-bag"></i>&nbsp; <h2>Mi carrito</h2>
+    <i class="flaticon-shopping-bag"></i>&nbsp; <h2>Cart</h2>
 </div> 
 
 <div class="cart-item-hover">                    
@@ -20,7 +20,7 @@
 
             <a href="#"><h3>Cantidad: <?php echo $detalle['cantidad'];?></h3></a>
             <b><button type="button" class="btn btn-xs btn-primary eliminar-producto" id="<?php echo $detalle['id'];?>">X</button></b>
-            <p>Precio: S/. <?php echo $detalle['precio'];?></p>
+            <p>Price: $. <?php echo $detalle['precio'];?></p>
             <?php $total+=$detalle['precio']*$detalle['cantidad'];  ?>
         </div>
     </form>
@@ -30,9 +30,9 @@
     <div class="border"></div>
 
     <div class="cart-total">
-        <?php if(isset($_SESSION['user_name'])){ ?>
-        <h6>Precio total:  </h6> <p><?php echo "S/. ".$total;?></p><div class="clearfix"></div>
-        <?php } ?>
+  
+        <h6>Total Price:  </h6> <p><?php echo "$. ".$total;?></p><div class="clearfix"></div>
+  
         <a href="check-out.php" class="cart-checkout">Verificar</a>
     </div>
 </div>

@@ -244,10 +244,8 @@ session_start();
                     </div>
                 <?php } ?>
                 <div class="row">
-
-
-
-                </div>
+                <div class="col-md-12 Mensaje" id="Mensaje" style="padding-bottom:10px;padding-top: 10px"></div>
+             </div>
 
 
 
