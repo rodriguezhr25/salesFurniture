@@ -110,7 +110,9 @@
 										@mail($email_to, $email_subject, $email_message, $headers);
 
 										echo "<div  class=\"alert alert-success alert-dismissible\" role=\"alert\" auto-close=\"2000\" > <button type=\"button\" class=\"close\" data-dismiss=\"alert\"  >&times;</button> Message sent successfully.</div>";
-
+										echo "<script type=\"text/javascript\">alert(\"Email Send!...!\");</script>";
+										session_destroy();
+										echo"<script language='javascript'>window.location='../index.php'</script>";
 	/* 	if (!$mail->send()) {
 			echo "Mailer Error: " . $mail->ErrorInfo;
 		} else {
