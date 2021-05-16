@@ -15,7 +15,15 @@
 	if(isset($_SESSION['detalle']) && count($_SESSION['detalle'])>0){
         $carrito = $_SESSION['detalle'];
 	        $total=0;
-			$mensaje="<div style='text-align: center;'><img 
+			$mensaje="
+			<!DOCTYPE html>
+			<html lang='en'>
+			<head>
+				<meta charset='UTF-8'>
+				<title>Contact form</title>
+			</head>
+			<body>
+			<div style='text-align: center;'><img 
 					src='images/logo.png'
 					width='176' height='176'
 					style='margin-right: 0px;'><br>
@@ -84,7 +92,12 @@
 										</div>
 
 									
-										<h4>Sales Furniture 2021</h4>";		
+										<h4>Sales Furniture 2021</h4>
+										</body>
+										</html>
+										";	
+										
+										
 										$email_from = "adminweb@starsalesfurniture.com";
 										$email_subject = "ORDER";
 										
