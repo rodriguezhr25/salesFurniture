@@ -115,7 +115,7 @@ session_start();
                                                         </a>
                                                         <b><button type="button" class="btn btn-xs btn-primary eliminar-producto" id="<?php echo $detalle['id']; ?>">X</button></b>
 
-                                                        <p>Precio: S/. <?php echo $detalle['precio']; ?></p>
+                                                        <p>Precio: $. <?php echo $detalle['precio']; ?></p>
                                                         <?php $total += $detalle['precio'] * $detalle['cantidad']; ?>
                                                     </div>
 
@@ -222,8 +222,8 @@ session_start();
                                                         <input type="number" class="cambia-cantidad" style="width: 60px" min="1" max="10000" step="1" name="txtCantidad" product_id="<?php echo $p['id']; ?>" stock="<?php echo $p['stock']; ?>" value="<?php echo $p['cantidad']; ?>" />
                                                         <input type="hidden" name="txtStock" product_id="<?php echo $p['id']; ?>" value="<?php echo $p['stock']; ?>" />
                                                     </td>
-                                                    <td class="text-right"><?php echo "S/" . number_format($p['precio'], 2, ".", ","); ?></td>
-                                                    <td class="text-right"><?php echo "S/" . number_format($total_uni, 2, ".", ","); ?></td>
+                                                    <td class="text-right"><?php echo "$" . number_format($p['precio'], 2, ".", ","); ?></td>
+                                                    <td class="text-right"><?php echo "$" . number_format($total_uni, 2, ".", ","); ?></td>
                                                     <td> <button type="button" class="btn btn-sm eliminar-detalle" id="<?php echo $p['id']; ?>"><i class="fa fa-trash"></i></button></td>
                                                 </tr>
                                             <?php
@@ -232,7 +232,7 @@ session_start();
                                             ?>
                                             <tr>
                                                 <td class="text-uppercase"><b>Total</b></td>
-                                                <td colspan="3" class="total text-right"><?php echo "S/ " . number_format($total, 2, ".", ","); ?></td>
+                                                <td colspan="3" class="total text-right"><?php echo "$ " . number_format($total, 2, ".", ","); ?></td>
                                             </tr>
                                             <tr>
                                                 <td> <button type="submit" class="btn btn-primary">Send</button></td>

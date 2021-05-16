@@ -133,7 +133,7 @@ if (!$_GET) {
                                                 </a>
                                                 <b><button type="button" class="btn btn-xs btn-primary eliminar-producto" id="<?php echo $detalle['id']; ?>">X</button></b>
 
-                                                <p>Precio: S/. <?php echo $detalle['precio']; ?></p>
+                                                <p>Precio: $. <?php echo $detalle['precio']; ?></p>
                                                 <?php $total += $detalle['precio'] * $detalle['cantidad']; ?>
                                             </div>
 
@@ -1056,7 +1056,7 @@ if (!$_GET) {
             var CarritoID = 'id' + idPadre;
             console.log(nombreID);
             document.getElementById(nombreID).innerHTML = nombre;
-            document.getElementById(precioID).innerHTML = "Precio: S/. " + precio1;
+            document.getElementById(precioID).innerHTML = "Precio: $. " + precio1;
             document.getElementById(descripcionID).innerHTML = note;
             document.getElementById(codigoID).innerHTML = model;
             document.getElementById(categoriaID).innerHTML = categoria;
