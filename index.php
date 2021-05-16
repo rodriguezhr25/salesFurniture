@@ -91,7 +91,7 @@ if (!$_GET) {
                     <a class="py-2  d-md-inline-block" href="index.php">HOME</a>
                 </li>
                 <!--     <li class="nav-item">
-                        <a class="py-2  d-md-inline-block" href="productos.php">CATALOGUE</a>
+                        <a class="py-2  d-md-inline-block" href="index.php">CATALOGUE</a>
                     </li> -->
 
                 <li class="nav-item">
@@ -208,7 +208,7 @@ if (!$_GET) {
 
 
                 <div>
-                    <form action=<?php echo "productos.php?pagina=1" ?> method="post">
+                    <form action=<?php echo "index.php?pagina=1" ?> method="post">
                         <div class="input-group">
                             <input type="text" name="search" placeholder="Search..." aria-label="Default" class="form-control" />
                             <div class="input-group-btn">
@@ -273,7 +273,7 @@ if (!$_GET) {
                                 //Calcular fin de paginación
                                 $end =  (($_GET['pagina'] + $link) < $paginas) ? $_GET['pagina'] + $link : $paginas;
                                 /* if ($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0) {
-                                header("Location: productos.php?pagina=1");
+                                header("Location: index.php?pagina=1");
                             }*/
                                 // $codbarras2 = 220350034;
                                 $inciar = ($_GET['pagina'] - 1) * $articulos_x_pagina;
@@ -631,19 +631,19 @@ if (!$_GET) {
                                     if (isset($_GET['fam'])) {
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] <= 1 ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo $_GET['pagina'] - 1; ?>&fam=<?php echo $_GET['fam']; ?>">Anterior</a>
+                                            <a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] - 1; ?>&fam=<?php echo $_GET['fam']; ?>">Anterior</a>
                                         </li>
                                     <?php
                                     } else if (isset($_GET['sub_fam'])) {
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] <= 1 ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo $_GET['pagina'] - 1; ?>&sub_fam=<?php echo $_GET['sub_fam']; ?>">Anterior</a>
+                                            <a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] - 1; ?>&sub_fam=<?php echo $_GET['sub_fam']; ?>">Anterior</a>
                                         </li>
                                     <?php
                                     } else if (isset($_GET['categ']) && (isset($_POST['search']) or isset($_GET['search']))) { //nuevo filtro de categorias
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] <= 1 ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo $_GET['pagina'] - 1; ?>&categ=<?php echo $_GET['categ']; ?>&search=<?php if (isset($_POST['search'])) {
+                                            <a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] - 1; ?>&categ=<?php echo $_GET['categ']; ?>&search=<?php if (isset($_POST['search'])) {
                                                                                                                                                                                 echo $_POST['search'];
                                                                                                                                                                             } else {
                                                                                                                                                                                 echo $_GET['search'];
@@ -659,7 +659,7 @@ if (!$_GET) {
                                     } else if (isset($_GET['categ'])) {
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] <= 1 ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo $_GET['pagina'] - 1; ?>&categ=<?php echo $_GET['categ']; ?><?php if (isset($_GET['marca'])) {
+                                            <a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] - 1; ?>&categ=<?php echo $_GET['categ']; ?><?php if (isset($_GET['marca'])) {
                                                                                                                                                                         echo "&marca=" . $_GET['marca'];
                                                                                                                                                                     } ?><?php if (isset($_GET['precioMin'])) {
                                                                                                                                                                 echo "&precioMin=" . $_GET['precioMin'];
@@ -671,7 +671,7 @@ if (!$_GET) {
                                     } else if (isset($_POST['search']) or isset($_GET['search'])) {
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] <= 1 ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo ($_GET['pagina'] - 1); ?>&search=<?php if (isset($_POST['search'])) {
+                                            <a class="page-link" href="index.php?pagina=<?php echo ($_GET['pagina'] - 1); ?>&search=<?php if (isset($_POST['search'])) {
                                                                                                                                             echo $_POST['search'];
                                                                                                                                         } else {
                                                                                                                                             echo $_GET['search'];
@@ -687,7 +687,7 @@ if (!$_GET) {
                                     } else {
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] <= 1 ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo $_GET['pagina'] - 1; ?><?php if (isset($_GET['marca'])) {
+                                            <a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] - 1; ?><?php if (isset($_GET['marca'])) {
                                                                                                                                     echo "&marca=" . $_GET['marca'];
                                                                                                                                 } ?><?php if (isset($_GET['precioMin'])) {
                                                                                                                             echo "&precioMin=" . $_GET['precioMin'];
@@ -703,7 +703,7 @@ if (!$_GET) {
                                         if (isset($_POST['search']) or isset($_GET['search'])) {
                                         ?>
                                             <li class="page-item ">
-                                                <a class="page-link" href="productos.php?pagina=1&search=<?php if (isset($_POST['search'])) {
+                                                <a class="page-link" href="index.php?pagina=1&search=<?php if (isset($_POST['search'])) {
                                                                                                                 echo $_POST['search'];
                                                                                                             } else {
                                                                                                                 echo $_GET['search'];
@@ -722,7 +722,7 @@ if (!$_GET) {
                                         } else {
                                         ?>
                                             <li class="page-item ">
-                                                <a class="page-link" href="productos.php?pagina=1<?php if (isset($_GET['marca'])) {
+                                                <a class="page-link" href="index.php?pagina=1<?php if (isset($_GET['marca'])) {
                                                                                                         echo "&marca=" . $_GET['marca'];
                                                                                                     } ?><?php if (isset($_GET['precioMin'])) {
                                                                                                 echo "&precioMin=" . $_GET['precioMin'];
@@ -746,19 +746,19 @@ if (!$_GET) {
                                         if (isset($_GET['fam'])) {
                                         ?>
                                             <li class="page-item <?php echo $_GET['pagina'] == $i + 1 ? 'active' : ''; ?>">
-                                                <a class="page-link" href="productos.php?pagina=<?php echo $i + 1; ?>&fam=<?php echo $_GET['fam']; ?>"><?php echo $i + 1; ?></a>
+                                                <a class="page-link" href="index.php?pagina=<?php echo $i + 1; ?>&fam=<?php echo $_GET['fam']; ?>"><?php echo $i + 1; ?></a>
                                             </li>
                                         <?php
                                         } else if (isset($_GET['sub_fam'])) {
                                         ?>
                                             <li class="page-item <?php echo $_GET['pagina'] == $i + 1 ? 'active' : ''; ?>">
-                                                <a class="page-link" href="productos.php?pagina=<?php echo $i + 1; ?>&sub_fam=<?php echo $_GET['sub_fam']; ?>"><?php echo $i + 1; ?></a>
+                                                <a class="page-link" href="index.php?pagina=<?php echo $i + 1; ?>&sub_fam=<?php echo $_GET['sub_fam']; ?>"><?php echo $i + 1; ?></a>
                                             </li>
                                         <?php
                                         } else if (isset($_GET['categ']) && (isset($_POST['search']) or isset($_GET['search']))) { //nuevo filtro de categorias
                                         ?>
                                             <li class="page-item <?php echo $_GET['pagina'] == $i + 1 ? 'active' : ''; ?>">
-                                                <a class="page-link" href="productos.php?pagina=<?php echo $i + 1; ?>&categ=<?php echo $_GET['categ']; ?>&search=<?php if (isset($_POST['search'])) {
+                                                <a class="page-link" href="index.php?pagina=<?php echo $i + 1; ?>&categ=<?php echo $_GET['categ']; ?>&search=<?php if (isset($_POST['search'])) {
                                                                                                                                                                         echo $_POST['search'];
                                                                                                                                                                     } else {
                                                                                                                                                                         echo $_GET['search'];
@@ -774,7 +774,7 @@ if (!$_GET) {
                                         } else if (isset($_GET['categ'])) {
                                         ?>
                                             <li class="page-item <?php echo $_GET['pagina'] == $i + 1 ? 'active' : ''; ?>">
-                                                <a class="page-link" href="productos.php?pagina=<?php echo $i + 1; ?>&categ=<?php echo $_GET['categ']; ?><?php if (isset($_GET['marca'])) {
+                                                <a class="page-link" href="index.php?pagina=<?php echo $i + 1; ?>&categ=<?php echo $_GET['categ']; ?><?php if (isset($_GET['marca'])) {
                                                                                                                                                                 echo "&marca=" . $_GET['marca'];
                                                                                                                                                             } ?><?php if (isset($_GET['precioMin'])) {
                                                                                                                                                         echo "&precioMin=" . $_GET['precioMin'];
@@ -786,7 +786,7 @@ if (!$_GET) {
                                         } else if (isset($_POST['search']) or isset($_GET['search'])) {
                                         ?>
                                             <li class="page-item <?php echo $_GET['pagina'] == $i + 1 ? 'active' : ''; ?>">
-                                                <a class="page-link" href="productos.php?pagina=<?php echo ($i + 1); ?>&search=<?php if (isset($_POST['search'])) {
+                                                <a class="page-link" href="index.php?pagina=<?php echo ($i + 1); ?>&search=<?php if (isset($_POST['search'])) {
                                                                                                                                     echo $_POST['search'];
                                                                                                                                 } else {
                                                                                                                                     echo $_GET['search'];
@@ -802,7 +802,7 @@ if (!$_GET) {
                                         } else {
                                         ?>
                                             <li class="page-item <?php echo $_GET['pagina'] == $i + 1 ? 'active' : ''; ?>">
-                                                <a class="page-link" href="productos.php?pagina=<?php echo $i + 1; ?><?php if (isset($_GET['marca'])) {
+                                                <a class="page-link" href="index.php?pagina=<?php echo $i + 1; ?><?php if (isset($_GET['marca'])) {
                                                                                                                             echo "&marca=" . $_GET['marca'];
                                                                                                                         } ?><?php if (isset($_GET['precioMin'])) {
                                                                                                                     echo "&precioMin=" . $_GET['precioMin'];
@@ -822,7 +822,7 @@ if (!$_GET) {
                                         <?php
                                         if (isset($_POST['search']) or isset($_GET['search'])) { ?>
                                             <li class="page-item ">
-                                                <a class="page-link" href="productos.php?pagina=<?php echo $paginas; ?>&search=<?php if (isset($_POST['search'])) {
+                                                <a class="page-link" href="index.php?pagina=<?php echo $paginas; ?>&search=<?php if (isset($_POST['search'])) {
                                                                                                                                     echo $_POST['search'];
                                                                                                                                 } else {
                                                                                                                                     echo $_GET['search'];
@@ -838,7 +838,7 @@ if (!$_GET) {
                                             </li>
                                         <?php } else { ?>
                                             <li class="page-item ">
-                                                <a class="page-link" href="productos.php?pagina=<?php echo $paginas; ?><?php if (isset($_GET['marca'])) {
+                                                <a class="page-link" href="index.php?pagina=<?php echo $paginas; ?><?php if (isset($_GET['marca'])) {
                                                                                                                             echo "&marca=" . $_GET['marca'];
                                                                                                                         } ?><?php if (isset($_GET['precioMin'])) {
                                                                                                                     echo "&precioMin=" . $_GET['precioMin'];
@@ -856,19 +856,19 @@ if (!$_GET) {
                                     if (isset($_GET['fam'])) {
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] >= $paginas ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo $_GET['pagina'] + 1; ?>&fam=<?php echo $_GET['fam']; ?>">Siguiente</a>
+                                            <a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] + 1; ?>&fam=<?php echo $_GET['fam']; ?>">Siguiente</a>
                                         </li>
                                     <?php
                                     } else if (isset($_GET['sub_fam'])) {
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] >= $paginas ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo $_GET['pagina'] + 1; ?>&sub_fam=<?php echo $_GET['sub_fam']; ?>">Siguiente</a>
+                                            <a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] + 1; ?>&sub_fam=<?php echo $_GET['sub_fam']; ?>">Siguiente</a>
                                         </li>
                                     <?php
                                     } else if (isset($_GET['categ']) && (isset($_POST['search']) or isset($_GET['search']))) { //nuevos filtros
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] >= $paginas ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo ($_GET['pagina'] + 1); ?>&search=<?php if (isset($_POST['search'])) {
+                                            <a class="page-link" href="index.php?pagina=<?php echo ($_GET['pagina'] + 1); ?>&search=<?php if (isset($_POST['search'])) {
                                                                                                                                             echo $_POST['search'];
                                                                                                                                         } else {
                                                                                                                                             echo $_GET['search'];
@@ -885,7 +885,7 @@ if (!$_GET) {
                                     } else if (isset($_GET['categ'])) {
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] >= $paginas ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo $_GET['pagina'] + 1; ?>&categ=<?php echo $_GET['categ']; ?><?php if (isset($_GET['marca'])) {
+                                            <a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] + 1; ?>&categ=<?php echo $_GET['categ']; ?><?php if (isset($_GET['marca'])) {
                                                                                                                                                                         echo "&marca=" . $_GET['marca'];
                                                                                                                                                                     } ?><?php if (isset($_GET['precioMin'])) {
                                                                                                                                                                 echo "&precioMin=" . $_GET['precioMin'];
@@ -897,7 +897,7 @@ if (!$_GET) {
                                     } else if (isset($_POST['search']) or isset($_GET['search'])) {
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] >= $paginas ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo ($_GET['pagina'] + 1); ?>&search=<?php if (isset($_POST['search'])) {
+                                            <a class="page-link" href="index.php?pagina=<?php echo ($_GET['pagina'] + 1); ?>&search=<?php if (isset($_POST['search'])) {
                                                                                                                                             echo $_POST['search'];
                                                                                                                                         } else {
                                                                                                                                             echo $_GET['search'];
@@ -913,7 +913,7 @@ if (!$_GET) {
                                     } else {
                                     ?>
                                         <li class="page-item <?php echo $_GET['pagina'] >= $paginas ? 'disabled' : ''; ?>">
-                                            <a class="page-link" href="productos.php?pagina=<?php echo $_GET['pagina'] + 1; ?><?php if (isset($_GET['marca'])) {
+                                            <a class="page-link" href="index.php?pagina=<?php echo $_GET['pagina'] + 1; ?><?php if (isset($_GET['marca'])) {
                                                                                                                                     echo "&marca=" . $_GET['marca'];
                                                                                                                                 } ?><?php if (isset($_GET['precioMin'])) {
                                                                                                                             echo "&precioMin=" . $_GET['precioMin'];
@@ -939,7 +939,7 @@ if (!$_GET) {
         <footer class="fixed-bottom footer" id="footer">
             <div class="container">
 
-                <span class="py-2 d-md-inline-block">&copy; 2020 <span>Start Sales Furniture</span> | <a href="../index.php">HOME</a> | <a href="productos.php">CATALOGUE</a></span>
+                <span class="py-2 d-md-inline-block">&copy; 2020 <span>Start Sales Furniture</span> | <a href="../index.php">HOME</a> | <a href="index.php">CATALOGUE</a></span>
 
             </div>
         </footer>
