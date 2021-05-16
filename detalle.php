@@ -33,7 +33,7 @@
   
         <h6>Total Price:  </h6> <p><?php echo "$. ".$total;?></p><div class="clearfix"></div>
   
-        <a href="check-out.php" class="cart-checkout">Verificar</a>
+        <a href="check-out.php" class="cart-checkout">Finish</a>
     </div>
 </div>
 <?php } ?>
